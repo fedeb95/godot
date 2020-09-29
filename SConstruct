@@ -367,9 +367,9 @@ if selected_platform in platform_list:
         sys.path.append(tmppath)
         env.current_module = x
         import config
-        if (config.can_build(selected_platform)):
-            config.configure(env)
-            env.module_list.append(x)
+        #if (config.can_build(selected_platform)):
+        config.configure(env)
+        env.module_list.append(x)
         sys.path.remove(tmppath)
         sys.modules.pop('config')
 
